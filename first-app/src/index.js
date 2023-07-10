@@ -7,21 +7,13 @@ import ReactDOM from 'react-dom/client';
 import Library from './test/Library';
 import Clock from './ch04/clock';
 import CommentList from './ch05/CommentList';
+import NotificationList from './ch06/NotificationList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// setInterval(() => {
-//   root.render(
-//     <React.StrictMode>
-//       <Clock />
-//     </React.StrictMode>,
-//     document.getElementById('root')
-//   );
-// }, 1000);
-
 root.render(
   <React.StrictMode>
-    <CommentList />
+    <NotificationList />
   </React.StrictMode>,
   document.getElementById('root')
 );
