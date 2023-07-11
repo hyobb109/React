@@ -3,15 +3,19 @@ import Notification from './Notification';
 
 const reserveNotifications = [
   {
+    id: 1,
     message: '안녕하세요 오늘 일정입니다.',
   },
   {
+    id: 2,
     message: '일어날 시간입니다.',
   },
   {
+    id: 3,
     message: '점심 식사 시간입니다.',
   },
   {
+    id: 4,
     message: '저녁 식사 시간입니다.',
   },
 ];
@@ -43,11 +47,18 @@ class NotificationList extends React.Component {
     }, 1000);
   }
 
+  // 컴포넌트가 제거될 때 타이머 제거
+  componentWillUnmount() {
+    if (timer) {
+      clearInterval(timer);
+    }
+  }
+
   render() {
     return (
       <div>
         {this.state.notifications.map((notification) => {
-          return <Notification message={notification.message} />;
+          return <Notification key={notification.id} id={notification.id} message={notification.message} />;
         })}
       </div>
     );
