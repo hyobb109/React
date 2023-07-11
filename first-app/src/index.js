@@ -8,14 +8,14 @@ import Library from './test/Library';
 import Clock from './ch04/clock';
 import CommentList from './ch05/CommentList';
 import NotificationList from './ch06/NotificationList';
+import Accommodate from './ch07/Accommodate';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <NotificationList />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Accommodate />
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
